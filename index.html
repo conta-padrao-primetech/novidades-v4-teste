@@ -359,6 +359,43 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .feat.cv .painel .moldura { position: relative; inset: auto; width: 54px; height: 54px; border-radius: 50%; flex: none; border: 2px solid rgba(255, 255, 255, .55); }
   .feat.cv .painel .moldura .ph, .feat.cv .painel .moldura img { border-radius: 50%; }
   .feat.cv .painel .emote { display: none; }
+
+  /* ===== escala proporcional ao celular (u = menor entre 1% da largura e 0,5% da altura) ===== */
+  :root { --u: min(1vw, .5vh); }
+  @supports (height: 1dvh) { :root { --u: min(1vw, .5dvh); } }
+  html, body { overflow: hidden; }
+  .historia { height: 100dvh; height: 100lvh; }
+  .slide.feat { grid-template-rows: auto calc(var(--u) * 56); row-gap: calc(var(--u) * 8); padding: calc(88px + env(safe-area-inset-top, 0px)) calc(var(--u) * 5.4) calc(64px + env(safe-area-inset-bottom, 0px) + (100lvh - 100dvh)); }
+  .abertura { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px) + (100lvh - 100dvh)); }
+  .marca { font-size: max(14px, calc(var(--u) * 4.1)); }
+  .topo .quem b { font-size: max(11.5px, calc(var(--u) * 3.3)); }
+  .topo .quem span { font-size: max(10.5px, calc(var(--u) * 3)); }
+  .feat .t-topo .pilulas { margin: 0 0 calc(var(--u) * 3.5); }
+  .feat .t-topo .pil, .feat .t-topo .pil.area { height: calc(var(--u) * 7.8); padding: 0 calc(var(--u) * 2.9); font-size: max(11.5px, calc(var(--u) * 3.3)); gap: 7px; }
+  .feat .t-topo h2 { font-size: max(21px, calc(var(--u) * 7.4)); margin: 0 0 calc(var(--u) * 3); }
+  .feat .t-topo p.chamada { font-size: max(14.5px, calc(var(--u) * 4.5)); }
+  .feat .t-base { gap: calc(var(--u) * 3.6); margin-top: calc(var(--u) * 3); }
+  .feat .t-base .btn-claro { min-height: calc(var(--u) * 12); padding: 0 calc(var(--u) * 5); font-size: max(13px, calc(var(--u) * 3.9)); }
+  .feat .t-base p.pub { font-size: max(11.5px, calc(var(--u) * 3.3)); }
+  .feat .painel { padding: calc(var(--u) * 4.4) calc(var(--u) * 4.6); border-radius: calc(var(--u) * 6); }
+  .feat.cv .painel, .feat.dep.sf .painel, .feat.val .painel { grid-template-columns: calc(var(--u) * 17) 1fr; column-gap: calc(var(--u) * 3.6); align-self: stretch; grid-template-rows: auto auto 1fr; }
+  .feat.cv .painel .arte, .feat.cv .painel .moldura, .feat.dep.sf .painel .arte.emo, .feat.dep.sf .painel .arte.emo .emote, .feat.val .painel .arte.emo .emote { width: calc(var(--u) * 17); height: calc(var(--u) * 17); }
+  .feat.dep.sf .painel .arte.emo .emote, .feat.val .painel .arte.emo .emote { border-radius: calc(var(--u) * 5.2); }
+  .feat.dep.sf .painel .arte.emo .emote svg, .feat.val .painel .arte.emo .emote svg { width: calc(var(--u) * 10.4); height: calc(var(--u) * 10.4); }
+  .feat .vrot { font-size: max(8.5px, calc(var(--u) * 2.6)); margin-bottom: 3px; }
+  .feat.cv .painel .vquote cite, .feat.dep.sf .painel .vquote cite { font-size: max(11px, calc(var(--u) * 3.3)); }
+  .feat.cv .painel .vquote cite b, .feat.dep.sf .painel .vquote cite b { font-size: max(12px, calc(var(--u) * 3.7)); }
+  .feat.val .painel .arte.emo .legenda b { font-size: max(12px, calc(var(--u) * 3.7)); }
+  .feat.cv .painel .vquote q, .feat.dep.sf .painel .vquote q, .feat.val .painel .vpo p { margin: calc(var(--u) * 3) 0 0; align-self: center; }
+  .feat .vquote q { font-size: max(13px, calc(var(--u) * 4.2)); }
+  .feat.val .painel .vpo p { font: 600 max(13px, calc(var(--u) * 4.4))/1.32 "Space Grotesk", sans-serif; }
+  .feat.sf0 .painel .arte.emo .emote { width: calc(var(--u) * 24); height: calc(var(--u) * 24); border-radius: calc(var(--u) * 7); }
+  .feat.sf0 .painel .arte.emo .emote svg { width: calc(var(--u) * 14.5); height: calc(var(--u) * 14.5); }
+  .feat.sf0 .painel .arte.emo .legenda b { font-size: max(16px, calc(var(--u) * 5)); }
+  .abertura h1 { font-size: max(28px, calc(var(--u) * 9)); }
+  .abertura .lead, .abertura .resumo p { font-size: max(15px, calc(var(--u) * 4.7)); line-height: 1.4; }
+  .abertura .cap { font-size: max(13px, calc(var(--u) * 3.8)); }
+  .abertura .bloco .pil { font-size: max(12px, calc(var(--u) * 3.5)); height: calc(var(--u) * 8); }
 }
 </style>
 </head>
@@ -630,6 +667,18 @@ window.__DATA = {"fonte": "embutido", "edicoes": [{"id": "v4-exemplo", "periodo"
   var ICO_PAUSA = '<svg viewBox="0 0 24 24" fill="#fff"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
   var ICO_PLAY = '<svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5l11 7-11 7z"/></svg>';
   function mostrar() {
+    state.slides.forEach(function (s, i) {
+      var on = i === state.idx;
+      if (on && window.matchMedia && window.matchMedia("(max-width: 899px)").matches) {
+        var c2 = s.style.getPropertyValue("--a2") || "";
+        if (c2) {
+          document.documentElement.style.backgroundColor = c2;
+          var tc = document.querySelector('meta[name="theme-color"]');
+          if (!tc) { tc = document.createElement("meta"); tc.name = "theme-color"; document.head.appendChild(tc); }
+          tc.content = c2;
+        }
+      }
+    });
     state.slides.forEach(function (s, i) {
       var on = i === state.idx;
       s.classList.toggle("on", on);
