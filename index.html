@@ -365,30 +365,30 @@ button { font: inherit; color: inherit; cursor: pointer; }
   @supports (height: 1dvh) { :root { --u: min(1vw, .5dvh); } }
   html, body { overflow: hidden; }
   .historia { height: 100dvh; height: 100lvh; }
-  .slide.feat { grid-template-rows: auto calc(var(--u) * 56); row-gap: calc(var(--u) * 8); padding: calc(88px + env(safe-area-inset-top, 0px)) calc(var(--u) * 5.4) calc(64px + env(safe-area-inset-bottom, 0px) + (100lvh - 100dvh)); }
-  .abertura { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px) + (100lvh - 100dvh)); }
-  .marca { font-size: max(14px, calc(var(--u) * 4.1)); }
-  .topo .quem b { font-size: max(11.5px, calc(var(--u) * 3.3)); }
-  .topo .quem span { font-size: max(10.5px, calc(var(--u) * 3)); }
+  .slide.feat { grid-template-rows: auto calc(var(--u) * 59); row-gap: calc(var(--u) * 6); padding: calc(78px + env(safe-area-inset-top, 0px)) calc(var(--u) * 5.4) calc(54px + env(safe-area-inset-bottom, 0px) + (100lvh - 100dvh)); }
+  .abertura { padding-bottom: calc(54px + env(safe-area-inset-bottom, 0px) + (100lvh - 100dvh)); }
+  .marca { font-size: max(15px, calc(var(--u) * 4.5)); }
+  .topo .quem b { font-size: max(12.5px, calc(var(--u) * 3.8)); }
+  .topo .quem span { font-size: max(11.5px, calc(var(--u) * 3.4)); }
   .feat .t-topo .pilulas { margin: 0 0 calc(var(--u) * 3.5); }
-  .feat .t-topo .pil, .feat .t-topo .pil.area { height: calc(var(--u) * 7.8); padding: 0 calc(var(--u) * 2.9); font-size: max(11.5px, calc(var(--u) * 3.3)); gap: 7px; }
-  .feat .t-topo h2 { font-size: max(21px, calc(var(--u) * 7.4)); margin: 0 0 calc(var(--u) * 3); }
-  .feat .t-topo p.chamada { font-size: max(14.5px, calc(var(--u) * 4.5)); }
+  .feat .t-topo .pil, .feat .t-topo .pil.area { height: calc(var(--u) * 8.6); padding: 0 calc(var(--u) * 3.2); font-size: max(12.5px, calc(var(--u) * 3.7)); gap: 7px; }
+  .feat .t-topo h2 { font-size: min(max(22px, calc(var(--u) * 8.1)), 7.4vw); margin: 0 0 calc(var(--u) * 3); }
+  .feat .t-topo p.chamada { font-size: max(15.5px, calc(var(--u) * 5)); }
   .feat .t-base { gap: calc(var(--u) * 3.6); margin-top: calc(var(--u) * 3); }
-  .feat .t-base .btn-claro { min-height: calc(var(--u) * 12); padding: 0 calc(var(--u) * 5); font-size: max(13px, calc(var(--u) * 3.9)); }
-  .feat .t-base p.pub { font-size: max(11.5px, calc(var(--u) * 3.3)); }
+  .feat .t-base .btn-claro { min-height: calc(var(--u) * 13); padding: 0 calc(var(--u) * 5.4); font-size: max(14px, calc(var(--u) * 4.3)); }
+  .feat .t-base p.pub { font-size: max(12.5px, calc(var(--u) * 3.7)); }
   .feat .painel { padding: calc(var(--u) * 4.4) calc(var(--u) * 4.6); border-radius: calc(var(--u) * 6); }
   .feat.cv .painel, .feat.dep.sf .painel, .feat.val .painel { grid-template-columns: calc(var(--u) * 17) 1fr; column-gap: calc(var(--u) * 3.6); align-self: stretch; grid-template-rows: auto auto 1fr; }
   .feat.cv .painel .arte, .feat.cv .painel .moldura, .feat.dep.sf .painel .arte.emo, .feat.dep.sf .painel .arte.emo .emote, .feat.val .painel .arte.emo .emote { width: calc(var(--u) * 17); height: calc(var(--u) * 17); }
   .feat.dep.sf .painel .arte.emo .emote, .feat.val .painel .arte.emo .emote { border-radius: calc(var(--u) * 5.2); }
   .feat.dep.sf .painel .arte.emo .emote svg, .feat.val .painel .arte.emo .emote svg { width: calc(var(--u) * 10.4); height: calc(var(--u) * 10.4); }
-  .feat .vrot { font-size: max(8.5px, calc(var(--u) * 2.6)); margin-bottom: 3px; }
-  .feat.cv .painel .vquote cite, .feat.dep.sf .painel .vquote cite { font-size: max(11px, calc(var(--u) * 3.3)); }
-  .feat.cv .painel .vquote cite b, .feat.dep.sf .painel .vquote cite b { font-size: max(12px, calc(var(--u) * 3.7)); }
-  .feat.val .painel .arte.emo .legenda b { font-size: max(12px, calc(var(--u) * 3.7)); }
+  .feat .vrot { font-size: max(9.5px, calc(var(--u) * 3)); margin-bottom: 3px; }
+  .feat.cv .painel .vquote cite, .feat.dep.sf .painel .vquote cite { font-size: max(12px, calc(var(--u) * 3.8)); }
+  .feat.cv .painel .vquote cite b, .feat.dep.sf .painel .vquote cite b { font-size: max(13.5px, calc(var(--u) * 4.3)); }
+  .feat.val .painel .arte.emo .legenda b { font-size: max(13.5px, calc(var(--u) * 4.3)); }
   .feat.cv .painel .vquote q, .feat.dep.sf .painel .vquote q, .feat.val .painel .vpo p { margin: calc(var(--u) * 3) 0 0; align-self: center; }
-  .feat .vquote q { font-size: max(13px, calc(var(--u) * 4.2)); }
-  .feat.val .painel .vpo p { font: 600 max(13px, calc(var(--u) * 4.4))/1.32 "Space Grotesk", sans-serif; }
+  .feat .vquote q { font-size: max(14px, calc(var(--u) * 4.5)); }
+  .feat.val .painel .vpo p { font: 600 max(14px, calc(var(--u) * 4.8))/1.32 "Space Grotesk", sans-serif; }
   .feat.sf0 .painel .arte.emo .emote { width: calc(var(--u) * 24); height: calc(var(--u) * 24); border-radius: calc(var(--u) * 7); }
   .feat.sf0 .painel .arte.emo .emote svg { width: calc(var(--u) * 14.5); height: calc(var(--u) * 14.5); }
   .feat.sf0 .painel .arte.emo .legenda b { font-size: max(16px, calc(var(--u) * 5)); }
